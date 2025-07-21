@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intranet Magna Locações - Página Inicial</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/styleNiver.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="assets/img/LGML-perfil.jpg" alt="Logo da Empresa" />
+        Magna Locações
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Página Inicial</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="rh.html">Recursos Humanos</a></li>
+          <li><a href="ti.html">TI & Suporte</a></li>
+          <li>
+            <a href="listaRamais.html">Lista de Ramais</a>
+          </li>
+          <li><a href="#">Projetos</a></li>
+          <li><a href="#">Eventos</a></li>
+          <li><a href="#">Diretório</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+      <header>
+        <h1>Bem-vindo(a) à Intranet, Magna Locações</h1>
+      </header>
+
+      <section class="dashboard-grid">
+        <div class="card news-feed">
+          <h2>Feed de Notícias e Comunicados</h2>
+          <div id="news-container"></div>
+        </div>
+
+        <div class="card quick-links">
+          <h2>Acesso Rápido</h2>
+          <ul>
+            <li><a href="sobre.html">Sobre a Magna Locações</a></li>
+            <li>
+              <a href="http://chamado.magnaloc.com.br/" target="_blank"
+                >Abrir Chamado de TI</a
+              >
+            </li>
+            <li><a href="#">Política de Home Office</a></li>
+            <li><a href="#">Benefícios Corporativos</a></li>
+            <li><a href="#">Treinamentos Online</a></li>
+          </ul>
+          <main>
+            <section id="aniversariante-do-dia">
+              <h2>🎉 Aniversariante do Dia 🎉</h2>
+              <div id="destaque">
+                <p>Nenhum aniversariante hoje.</p>
+              </div>
+            </section>
+
+            <section id="lista-aniversariantes">
+              <h2>Próximos Aniversariantes</h2>
+              <div id="aniversariantes-por-mes"></div>
+            </section>
+          </main>
+        </div>
+      </section>
+
+      <footer>© 2025 Magna Locações. Desenvolvido por: @fsiilva</footer>
+    </div>
+
+    <script src="assets/js/news.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/aniversariante.js"></script>
+  </body>
+</html>

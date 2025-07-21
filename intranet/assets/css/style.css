@@ -1,0 +1,221 @@
+/* --- assets/css/style.css --- */
+:root {
+  --cor-principal: #007bff; /* Azul */
+  --cor-secundaria: #6c757d; /* Cinza */
+  --cor-fundo: #f4f7f6;
+  --cor-texto: #343a40;
+  --cor-borda: #dee2e6;
+  --cor-card-fundo: #ffffff;
+  --sombra-leve: rgba(0, 0, 0, 0.08);
+  --transicao-rapida: all 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Layout Principal */
+.sidebar {
+  width: 250px;
+  background-color: var(--cor-principal);
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px var(--sombra-leve);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar .logo {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar .logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Se a logo for circular */
+}
+
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+  transition: var(--transicao-rapida);
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--cor-card-fundo);
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--sombra-leve);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: var(--cor-principal);
+  font-size: 28px;
+  margin: 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid var(--cor-principal);
+}
+
+.user-info span {
+  font-weight: 600;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Coluna de notícias maior, coluna lateral menor */
+  gap: 30px;
+  flex-grow: 1;
+}
+
+/* Para cards que ocupam a largura total em páginas como Comunicação, RH */
+.dashboard-grid .full-width {
+  grid-column: 1 / -1; /* Ocupa todas as colunas disponíveis */
+}
+
+.card {
+  background-color: var(--cor-card-fundo);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--sombra-leve);
+}
+
+.card h2 {
+  color: var(--cor-principal);
+  margin-bottom: 20px;
+  font-size: 22px;
+  border-bottom: 1px solid var(--cor-borda);
+  padding-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--cor-borda);
+  color: var(--cor-secundaria);
+  font-size: 14px;
+}
+
+/* Estilos para listas dentro dos cards (em RH, Comunicação) */
+.card ul {
+  list-style: none;
+  padding-left: 20px; /* Indentação para listas */
+  margin-bottom: 15px;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+.card ul li a {
+  color: var(--cor-principal);
+  text-decoration: none;
+  transition: var(--transicao-rapida);
+}
+
+.card ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para links específicos (documentos, formulários) */
+.document-link::before,
+.form-link::before {
+  content: "📁 "; /* Ícone de pasta ou arquivo */
+  margin-right: 5px;
+}
+.form-link::before {
+  content: "📝 "; /* Ícone de formulário */
+}
+
+/* Responsividade básica para telas menores */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    box-shadow: 0 2px 5px var(--sombra-leve);
+  }
+  .sidebar nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  .sidebar nav ul li {
+    margin-bottom: 0;
+  }
+  .sidebar nav ul li a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .main-content {
+    padding: 20px;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+  }
+}
