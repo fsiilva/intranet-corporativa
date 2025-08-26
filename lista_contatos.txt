@@ -1,0 +1,692 @@
+
+{
+          name: "Adriana Melo",
+          role: "Assistente Comercial",
+          phoneFixed: "(85) 3311 3205,
+          cellphone: "(85) 98214 1620",
+          email: "adriana.melo@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Alcioneide Carlos",
+          role: "Assistente Financeiro",
+          phoneFixed: "(85) 3311 3244",
+          cellphone: "(85) 98106 3714",
+          email: "alcioneide.carlos@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Aldene Silva",
+          role: "Assistente Comercial",
+          phoneFixed: "(85) 3311 3200",
+          cellphone: "(85) 99188 6612",
+          email: "aldene.silva@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Alinne Campos",
+          role: "Estagiária de Contabilidade",
+          phoneFixed: "(85) 3311 3200",
+          cellphone: "",
+          email: "alinne.campos@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Alisson Cavalcante",
+          role: "Assistente Administrativo",
+          phoneFixed: "(85) 3311 3235",
+          cellphone: "(85) 98147 4354",
+          email: "alisson.cavalcante@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+
+{
+          name: "Amanda Amorim",
+          role: "Assistente Comercial",
+          phoneFixed: "(88) 2157 0509",
+          cellphone: "(88) 99369 6980",
+          email: "amanda.amorim@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+
+
+{
+          name: "Amanda Amorim",
+          role: "Assistente Comercial",
+          phoneFixed: "(88) 2157 0509",
+          cellphone: "(88) 99369 6980",
+          email: "amanda.amorim@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Amanda Amorim",
+          role: "Assistente Comercial",
+          phoneFixed: "(88) 2157 0509",
+          cellphone: "(88) 99369 6980",
+          email: "amanda.amorim@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+
+{
+          name: "Amanda Amorim",
+          role: "Assistente Comercial",
+          phoneFixed: "(88) 2157 0509",
+          cellphone: "(88) 99369 6980",
+          email: "amanda.amorim@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Amanda Jucá",
+          role: "Assistente Financeiro",
+          phoneFixed: "(85) 3311 3218",
+          cellphone: "(85) 98106 3714",
+          email: "amanda.juca@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Ana Cláudia",
+          role: "Assistente de Cobrança",
+          phoneFixed: "(85) 3311 3229",
+          cellphone: "",
+          email: "ana.claudia@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Andreia Silva",
+          role: "Assistente Comercial",
+          phoneFixed: "(84) 3217 1216",
+          cellphone: "(84) 98118 9799",
+          email: "andreia.silva@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+
+{
+          name: "Bianca Santos",
+          role: "Assistente Administrativo/Aprendiz",
+          phoneFixed: "(98) 3303 0392",
+          cellphone: "(98) 99141 7300",
+          email: "bianca.santos@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Brian Junior",
+          role: "Analista de Serviços Fotovoltaicos",
+          phoneFixed: "(85) 3311 3200",
+          cellphone: "(85) 98125 5715",
+          email: "brian.junior@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+
+{
+          name: "César Jucá",
+          role: "Gerente Comercial",
+          phoneFixed: "(85) 3311 3213",
+          cellphone: "(85) 98147 6842",
+          email: "cesar.juca@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Davi Gaspar",
+          role: "Advogado",
+          phoneFixed: "(85) 3311 3237",
+          cellphone: "(85) 98159 0908",
+          email: "davi.gaspar@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Days Dayane",
+          role: "Encarregada de Pessoal",
+          phoneFixed: "(85) 3311 3248",
+          cellphone: "(85) 99217 6167",
+          email: "days.dayane@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Debora Melo",
+          role: "Supervisora Comercial",
+          phoneFixed: "(83) 3031 5200",
+          cellphone: "(83) 98105 6791",
+          email: "debora.melo@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Deborah Castro",
+          role: "Assistente Comercial",
+          phoneFixed: "(84) 3318 0504",
+          cellphone: "(84) 98118 8621",
+          email: "deborah.castro@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Dezielli Cardoso",
+          role: "Assistente Comercial",
+          phoneFixed: "(83) 3031 5200",
+          cellphone: "(83) 98118 9882",
+          email: "dezielli.cardoso@magnaloc.com.br",
+          whatsapp: "",
+        },
+ 
+{
+          name: "Dhaylianne Souza",
+          role: "Assistente de Faturamento",
+          phoneFixed: "(85) 3311 3225",
+          cellphone: "",
+          email: "dhaylianne.souza@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Diego Pereira",
+          role: "Supervisor Comercial",
+          phoneFixed: "(88) 2157 0509",
+          cellphone: "(88) 99208 4122",
+          email: "diego.pereira@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Elissandra Gomes",
+          role: "Recepcionista",
+          phoneFixed: "(85) 3311 3200	",
+          cellphone: "",
+          email: "elisandra.gomes@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Erick Lopes",
+          role: "Assistente Administrativo/Aprendiz",
+          phoneFixed: "(85) 3311 3200",
+          cellphone: "",
+          email: "erick.lopes@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+
+{
+          name: "Felipe Correa",
+          role: "Supervisor Comercial",
+          phoneFixed: "(98) 3303 0392",
+          cellphone: "(98) 99204 8292",
+          email: "felipe.correa@magnaloc.com.br",
+          whatsapp: "",
+        },	
+
+
+{
+          name: "Fhelipe Santos",
+          role: "Analista Operacional",
+          phoneFixed: "(84) 3217 1216",
+          cellphone: "(84) 98118 9598",
+          email: "felipe.santos@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Flaviano Marreiro",
+          role: "Analista de Logistica",
+          phoneFixed: "(85) 3311 3221",
+          cellphone: "(85) 98149 1295",
+          email: "flaviano.marreiro@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Flavio Silva",
+          role: "Supervisor de TI",
+          phoneFixed: "(85) 3311 3200",
+          cellphone: "(85) 98138 2702",
+          email: "flavio.silva@magnaloc.com.br",
+          whatsapp: "",
+        },
+ 
+{
+          name: "Francisco Junior",
+          role: "Gerente Comercial",
+          phoneFixed: "(81) 3455 1479",
+          cellphone: "(81) 98112 7140",
+          email: "francisco.junior@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Helyberto Nunes",
+          role: "Encarregado de Logística",
+          phoneFixed: "(81) 3455 1479",
+          cellphone: "(81) 99112 0726",
+          email: "helyberto.nunes@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Hortencia Paiva",
+          role: "Analista de Cobrança",
+          phoneFixed: "(85) 3322 3223",
+          cellphone: "(85) 98106 3561",
+          email: "hortencia.paiva@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Ionara Albino",
+          role: "Analista de Cobrança",
+          phoneFixed: "(85) 3322 3224",
+          cellphone: "",
+          email: "ionara.albino@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Isaac Silva",
+          role: "Assistente Administrativo",
+          phoneFixed: "(85) 3311 3235",
+          cellphone: "(85) 98147 4354",
+          email: "isaac.silva@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Italo Rafael",
+          role: "Assistente Administrativo",
+          phoneFixed: "(85) 3311 3214",
+          cellphone: "",
+          email: "italo.rafael@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Jair Oliveira",
+          role: "Coordenador Projetos",
+          phoneFixed: "(85) 3311 3235",
+          cellphone: "(85) 98116 7062",
+          email: "jair.oliveira@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Janaina Nogueira",
+          role: "Assistente de Almoxarifado",
+          phoneFixed: "(85) 3311 3235",
+          cellphone: "",
+          email: "janaina.nogueira@magnaloc.com.br",
+          whatsapp: "",
+        },
+ 
+
+{
+          name: "Jessica Santiago",
+          role: "Assistente Administrativo",
+          phoneFixed: "",
+          cellphone: "",
+          email: "jessica.santiago@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Joana Gomes",
+          role: "Assistente Comercial",
+          phoneFixed: "(86) 2140 0618",
+          cellphone: "(86) 98127 0165",
+          email: "joana.gomes@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "João Daniel",
+          role: "Assistente de Almoxarifado",
+          phoneFixed: "(85) 3311 3235",
+          cellphone: "",
+          email: "joao.daniel@magnaloc.com.br",
+          whatsapp: "",
+        },
+ 
+{
+          name: "João Victor",
+          role: "Presidente",
+          phoneFixed: "(85) 3311 3200",
+          cellphone: "(85) 98186 2305",
+          email: "joao.victor@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+
+{
+          name: "Jomar Lima",
+          role: "Encarregado Logistica",
+          phoneFixed: "(98) 3303 0392",
+          cellphone: "(98) 98429 1483",
+          email: "jomar.lima@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "João Paulo",
+          role: "Comprador",
+          phoneFixed: "(85) 3311 3233",
+          cellphone: "(85) 98868 7249",
+          email: "joao.paulo@carneriodemelo.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "José Williams",
+          role: "Auditor",
+          phoneFixed: "(85) 3311 3235",
+          cellphone: "(85) 98186 3941",
+          email: "jose.williams@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Joseane Silva",
+          role: "Assistente Comercial",
+          phoneFixed: "(85) 3311 3205",
+          cellphone: "(85) 98203 1031",
+          email: "joseane.silva@magnaloc.com.br",
+          whatsapp: "",
+        },
+ 
+{
+          name: "Joyce Paiva",
+          role: "Assistente Administrativo/Aprendiz",
+          phoneFixed: "(84) 3318 0506",
+          cellphone: "(84) 99113 1068",
+          email: "joyce.paiva@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Juan Ribeiro",
+          role: "Assistente Administrativo/Aprendiz",
+          phoneFixed: "(85) 3311 3200",
+          cellphone: "",
+          email: "juan.ribeiro@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+
+ 
+{
+          name: "Julia Aiko",
+          role: "",
+          phoneFixed: "",
+          cellphone: "",
+          email: "julia.aiko@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Julya Amorim",
+          role: "",
+          phoneFixed: "",
+          cellphone: "",
+          email: "julya.amorim@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Karine Sobral",
+          role: "Diretora",
+          phoneFixed: "(85) 3311 3200",
+          cellphone: "(85) 99181 0750",
+          email: "karine.sobral@magnaloc.com.br",
+          whatsapp: "",
+        },		
+
+{
+          name: "Kauan Sousa",
+          role: "",
+          phoneFixed: "",
+          cellphone: "",
+          email: "kauan.sousa@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Kenes Mendes",
+          role: "Coordenador Comercial",
+          phoneFixed: "(84) 3318 0504",
+          cellphone: "(84) 98883 0500",
+          email: "kenes.mendes@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Layene Silva",
+          role: "",
+          phoneFixed: "",
+          cellphone: "",
+          email: "layene.silva@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Leandro Batista",
+          role: "Coordenador Comercial",
+          phoneFixed: "(84) 3217 1216",
+          cellphone: "(84) 98118 9764",
+          email: "leandro.batista@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Liliane Alves",
+          role: "Assistente Comercial",
+          phoneFixed: "(83) 3031 5200",
+          cellphone: "(83) 99175 6106",
+          email: "liliane.alves@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Marcelo Pires",
+          role: "Supervisor Comercial",
+          phoneFixed: "(86) 2140 0618",
+          cellphone: "(86) 98825 3571",
+          email: "marcelo.pires@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Marcia Caldas",
+          role: "Gerente de RH",
+          phoneFixed: "(85) 3311 3222",
+          cellphone: "(85) 98122 2322",
+          email: "marcia.caldas@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Marcio Leite",
+          role: "Gerente de Suprimentos",
+          phoneFixed: "(85) 3311 3200",
+          cellphone: "(85) 98167 6011",
+          email: "marcio.leite@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+
+{
+          name: "Marcos Andre",
+          role: "Assistente Administrativo/Conferente",
+          phoneFixed: "(84) 3217 1216",
+          cellphone: "",
+          email: "marcos.andre@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Maressa Lima",
+          role: "Assistente de Cobrança",
+          phoneFixed: "(85) 3311 3217",
+          cellphone: "(85) 98162 4234",
+          email: "maressa.lima@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Marina Alves",
+          role: "Assistente Administrativo",
+          phoneFixed: "(88) 2157 0509",
+          cellphone: "",
+          email: "marina.alves@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Nadynne Ferreira",
+          role: "Coordenadora Operacional",
+          phoneFixed: "(84) 3318 0504",
+          cellphone: "(84) 98118 8621",
+          email: "nadynne.ferreira@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Nathyele Silva",
+          role: "Assistente de Pessoal",
+          phoneFixed: "(85) 3311 3220",
+          cellphone: "",
+          email: "nathyele.silva@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Paula Silva",
+          role: "Supervisora Financeiro",
+          phoneFixed: "(85) 3311 3200",
+          cellphone: "(85) 98106 3714",
+          email: "paula.silva@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Paulo Andre",
+          role: "Assistente de Projetos",
+          phoneFixed: "(85) 3311 3212",
+          cellphone: "(85) 98142 2189",
+          email: "paulo.andre@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Paulo Ricardo",
+          role: "Assistente de Almoxarifado",
+          phoneFixed: "(85) 3311 3235",
+          cellphone: "(85) 98199 0714",
+          email: "paulo.ricardo@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Rafael Costa",
+          role: "Coordenador de Logistica",
+          phoneFixed: "(85) 3311 3226",
+          cellphone: "(85) 99966 0820",
+          email: "rafael.costa@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Renan Oliveira",
+          role: "Analista de Frota",
+          phoneFixed: "(85) 3311 3238",
+          cellphone: "",
+          email: "renan.oliveira@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Sarah Carvalho",
+          role: "Assistente de Faturamento",
+          phoneFixed: "(85) 3311 3202",
+          cellphone: "",
+          email: "sarah.carvalho@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Saulo Stenio",
+          role: "Assistente de Compras",
+          phoneFixed: "(85) 3311 3235",
+          cellphone: "",
+          email: "saulo.stenio@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Seila Marques",
+          role: "Assistente Financeiro",
+          phoneFixed: "(85) 3311 3242",
+          cellphone: "(85) 98106 3714",
+          email: "seila.marques@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Stephanne Bonifacio",
+          role: "Assistente Financeiro",
+          phoneFixed: "(85) 3311 3200",
+          cellphone: "(85) 98106 3714",
+          email: "stephanne.bonifacio@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Tamires Maria",
+          role: "Assistente Contabil",
+          phoneFixed: "(85) 3311 3219",
+          cellphone: "(85) 98105 4883",
+          email: "tamires.maria@magnaloc.com.br",
+          whatsapp: "",
+        },
+ {
+          name: "Tassiana Guedes",
+          role: "Supervisora Comercial",
+          phoneFixed: "(85) 3311 3208",
+          cellphone: "(85) 98140 9155",
+          email: "tassiana.guedes@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+
+{
+          name: "Thamires Constâncio",
+          role: "Assistente Comercial",
+          phoneFixed: "(86) 2140 0618",
+          cellphone: "(86) 98825 3704",
+          email: "thamires.constancio@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Thayna Rios",
+          role: "Assistente Administrativo/Aprendiz",
+          phoneFixed: "(81) 3455 1479",
+          cellphone: "",
+          email: "thayna.rios@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Thiago Pires",
+          role: "Conferente",
+          phoneFixed: "(83) 3031 5200",
+          cellphone: "(83) 98137 8362",
+          email: "thiago.pires@magnaloc.com.br",
+          whatsapp: "",
+        },
+
+{
+          name: "Victor Nanes",
+          role: "Assistente Contabil",
+          phoneFixed: "(85) 3311 3246",
+          cellphone: "(85) 98105 4883",
+          email: "victor.nanes@magnaloc.com.br",
+          whatsapp: "",
+        },
+{
+          name: "Wilderlan Barbosa",
+          role: "Assistente de Projetos",
+          phoneFixed: "(85) 3311 3212",
+          cellphone: "(85) 98142 2189",
+          email: "wilderlan.barbosa@magnaloc.com.br",
+          whatsapp: "",
+        },

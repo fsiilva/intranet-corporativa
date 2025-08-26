@@ -1,0 +1,94 @@
+
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 25px;
+    max-width: 960px;
+    margin: 30px auto;
+    background-color: #ffffff; /* Fundo branco para o conteúdo principal */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #1976d2; /* Um azul mais escuro para os títulos */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#aniversariante-do-dia {
+    background-color: #bbdefb; /* Azul claro para o destaque do dia */
+    border: 2px solid #2196f3; /* Borda no tom do azul primário */
+    padding: 25px;
+    margin-bottom: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#aniversariante-do-dia h2 {
+    color: #1a237e; /* Azul bem escuro para o título do destaque */
+    margin-top: 0;
+}
+
+#aniversariante-do-dia .aniversariante-card {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #0d47a1; /* Azul profundo para o nome do aniversariante em destaque */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#aniversariante-do-dia p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #424242;
+}
+
+.aniversariante-mes {
+    margin-bottom: 30px;
+    border: 1px solid #c5cae9; /* Borda suave para a seção do mês */
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f5f8ff; /* Fundo levemente azulado para as seções do mês */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.aniversariante-mes h3 {
+    background-color: #42a5f5; /* Azul médio para o cabeçalho do mês */
+    color: white;
+    padding: 12px;
+    margin: -20px -20px 20px -20px; /* Ajuste para o padding do container */
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+.aniversariante-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e3f2fd; /* Linha pontilhada suave entre os itens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.aniversariante-item:last-child {
+    border-bottom: none;
+}
+
+.aniversariante-item .nome {
+    font-weight: 600; /* Um pouco mais de destaque */
+    color: #3f51b5; /* Azul ligeiramente mais escuro para os nomes */
+}
+
+.aniversariante-item .data {
+    color: #757575; /* Cinza para as datas */
+    font-size: 0.9

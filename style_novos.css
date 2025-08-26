@@ -1,0 +1,476 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap");
+
+:root {
+  /* Paleta de Cores Moderna e Vibrante */
+  --primary-color: #6a0572; /* Roxo Profundo */
+  --secondary-color: #ab2881; /* Rosa Púrpura */
+  --accent-color: #f7b731; /* Amarelo Mostarda (para destaque) */
+  --background-light: #f0f2f5; /* Cinza claro suave */
+  --card-background: #ffffff; /* Fundo dos cards/elementos */
+  --text-dark: #2c3e50; /* Texto escuro quase preto */
+  --text-light: #ffffff; /* Texto branco */
+  --border-color: rgba(0, 0, 0, 0.1); /* Bordas suaves */
+  --shadow-light: rgba(0, 0, 0, 0.1); /* Sombra leve */
+  --shadow-medium: rgba(0, 0, 0, 0.15); /* Sombra média */
+}
+
+body {
+  font-family: "Inter", sans-serif; /* Fonte moderna e legível para o corpo */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    135deg,
+    var(--background-light) 0%,
+    #e0e0e0 100%
+  ); /* Gradiente de fundo */
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--card-background);
+  margin: 40px 20px;
+  padding: 30px 40px; /* Mais padding lateral */
+  border-radius: 12px; /* Bordas mais arredondadas */
+  box-shadow: 0 10px 30px var(--shadow-medium); /* Sombra mais pronunciada */
+  max-width: 1000px; /* Largura máxima maior */
+  width: 100%;
+  border: 1px solid var(--border-color); /* Borda sutil */
+}
+
+header {
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 40px;
+}
+
+.logo {
+  max-width: 180px; /* Logo um pouco maior */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-family: "Poppins", sans-serif; /* Fonte para títulos */
+  color: var(--primary-color);
+  font-size: 3em; /* Título maior */
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.5px; /* Espaçamento sutil */
+}
+
+/* --- Estilos para a Página de Lista (novos-colaboradores.html) --- */
+
+.new-hires-list h2 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+  position: relative; /* Para o underline animado */
+  padding-bottom: 10px;
+}
+
+.new-hires-list h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color); /* Cor de destaque */
+  border-radius: 2px;
+}
+
+.collaborator-card-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Cards ligeiramente maiores */
+  gap: 30px; /* Espaçamento maior entre os cards */
+  justify-content: center;
+}
+
+.collaborator-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: var(--text-dark);
+  box-shadow: 0 5px 15px var(--shadow-light); /* Sombra mais visível */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Garante que nada saia dos limites do card */
+  position: relative;
+  border: 1px solid var(--border-color);
+}
+
+.collaborator-card::before {
+  /* Efeito de cor ao passar o mouse */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Altura da barra superior */
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.collaborator-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px var(--shadow-medium);
+}
+
+.collaborator-card:hover::before {
+  transform: translateY(0);
+}
+
+.card-photo {
+  width: 90px; /* Foto um pouco maior no card */
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent-color); /* Borda da foto com cor de destaque */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Impede que a foto encolha */
+}
+
+.card-info {
+  flex-grow: 1;
+}
+
+.card-info h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6em; /* Nome maior */
+  color: var(--primary-color);
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+.card-info p {
+  font-size: 1em; /* Cargo mais legível */
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.area-tag {
+  display: inline-block;
+  background: linear-gradient(
+    45deg,
+    var(--secondary-color),
+    var(--primary-color)
+  ); /* Gradiente na tag */
+  color: var(--text-light);
+  font-size: 0.85em; /* Tag um pouco maior */
+  padding: 6px 12px;
+  border-radius: 20px; /* Mais arredondado (pill shape) */
+  margin-top: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos para a Página de Detalhes (colaborador-NOME.html) --- */
+
+.collaborator-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Espaçamento maior */
+  margin-bottom: 50px;
+  text-align: center; /* Centraliza o texto no mobile */
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.collaborator-photo {
+  width: 220px; /* Foto maior na página de detalhes */
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--accent-color); /* Borda mais grossa e de destaque */
+  box-shadow: 0 8px 20px var(--shadow-medium);
+  animation: fadeInScale 0.8s ease-out forwards; /* Animação ao carregar */
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.profile-info h2 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+  font-size: 2.8em; /* Nome maior */
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.profile-info .role {
+  font-size: 1.5em; /* Cargo mais proeminente */
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.area-info {
+  text-align: center; /* Centraliza tudo */
+  width: 100%;
+  background-color: var(--background-light); /* Fundo sutil */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra interna */
+}
+
+.area-info h3 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+  font-size: 2em; /* Título da área maior */
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.area-info h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.area-name {
+  font-size: 1.8em; /* Nome da área bem destacado */
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.area-description {
+  font-size: 1.15em; /* Descrição mais confortável de ler */
+  line-height: 1.7;
+  color: var(--text-dark);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.welcome-message-short p {
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  padding: 15px 20px;
+  background-color: rgba(106, 5, 114, 0.05); /* Fundo levemente colorido */
+  border-left: 5px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+.next-steps-mini {
+  margin-top: 40px;
+  background-color: var(--background-light);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.next-steps-mini h3 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+.next-steps-mini h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.next-steps-mini ul {
+  list-style: none; /* Remove marcadores padrão */
+  padding: 0;
+}
+
+.next-steps-mini ul li {
+  background-color: var(--card-background);
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid var(--secondary-color); /* Linha lateral colorida */
+  font-size: 1.05em;
+  color: var(--text-dark);
+  transition: all 0.2s ease;
+}
+
+.next-steps-mini ul li:hover {
+  transform: translateX(5px);
+  border-left-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding-top: 25px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 40px;
+  color: var(--secondary-color);
+  font-size: 0.95em;
+}
+
+/* --- Responsividade Geral --- */
+@media (min-width: 769px) {
+  /* Layout de perfil lado a lado em telas maiores */
+  .collaborator-profile {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .profile-header {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    width: auto;
+  }
+
+  .profile-info {
+    text-align: left;
+  }
+
+  .area-info {
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .area-info h3::after {
+    /* Ajuste do underline do título da área */
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .next-steps-mini h3::after {
+    left: 0;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 20px 15px;
+    padding: 25px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  .new-hires-list h2 {
+    font-size: 1.8em;
+  }
+
+  .collaborator-card-container {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+
+  .collaborator-card {
+    flex-direction: column; /* Empilha foto e info em telas menores */
+    text-align: center;
+  }
+
+  .card-photo {
+    margin-bottom: 15px;
+  }
+
+  .profile-info h2 {
+    font-size: 2.2em;
+  }
+
+  .profile-info .role {
+    font-size: 1.2em;
+  }
+
+  .area-info h3 {
+    font-size: 1.8em;
+  }
+
+  .area-name {
+    font-size: 1.5em;
+  }
+
+  .area-description {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+  .logo {
+    max-width: 120px;
+  }
+  .profile-info h2 {
+    font-size: 1.8em;
+  }
+  .profile-info .role {
+    font-size: 1.1em;
+  }
+}

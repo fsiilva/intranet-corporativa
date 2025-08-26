@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intranet Magna Locações - TI Suporte</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+  </head>
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #6c757d;
+      --light-gray: #f8f9fa;
+      --dark-gray: #343a40;
+      --text-color: #212529;
+      --success-color: #28a745;
+      --warning-color: #ffc107;
+      --shadow-light: rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px var(--shadow-light);
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: var(--dark-gray);
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      cursor: pointer;
+      width: 100%; /* Make buttons full width on small screens */
+      max-width: 350px; /* Limit width on larger screens */
+      margin: 0 auto; /* Center buttons */
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+      border: 2px solid var(--primary-color);
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: white;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .icon {
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .btn {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+      }
+      .action-buttons {
+        gap: 15px;
+      }
+    }
+  </style>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="assets/img/LGML-perfil.jpg" alt="Logo da Empresa" />
+        Magna Locações
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="comunicacao.html" class="active">Comunicação</a></li>
+          <li><a href="rh.html">Recursos Humanos</a></li>
+          <li><a href="ti.html">TI & Suporte</a></li>
+          <li>
+            <a href="listaRamais.html">Lista de Ramais</a>
+          </li>
+          <li><a href="links.html">Links Úteis</a></li>
+          <li><a href="#">Eventos</a></li>
+          <li><a href="#">Diretório</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+      <header>
+        <h1>Bem-vindo(a) à Intranet, Magna Locações</h1>
+      </header>
+
+      <section class="dashboard-grid">
+        <div class="card full-width">
+          <img
+            src="assets/img/magna_fachada.jpg"
+            style="width: 100%"
+            alt="fachada magna"
+            itemprop="image"
+          />
+          <h1>O que a sua obra precisa, a Magna Locações tem.</h1>
+
+          <p>
+            A <strong>Magna</strong> é uma empresa de
+            <strong>Locação de Equipamentos</strong> com atuação em
+            <strong>Fortaleza</strong> há mais de 40 anos. Nos últimos 15 anos,
+            ampliamos nosso atendimento para
+            <strong>07 cidades do Nordeste</strong>: Recife (PE), Natal (RN),
+            Mossoró (RN), João Pessoa (PB), São Luís (MA), Juazeiro do Norte
+            (CE) e Teresina (PI).
+          </p>
+
+          <p>
+            Somos referência no Nordeste em soluções de
+            <strong>módulos habitáveis e containers</strong>, e pela diversidade
+            de equipamentos como:
+            <strong
+              >andaimes, escoramentos, elevadores cremalheiras, betoneiras,
+              ferramentas elétricas e compactadores</strong
+            >. A Magna se faz presente ainda no segmento de "eventos" com seus
+            módulos habitáveis.
+          </p>
+
+          <p>
+            Visando a segurança em todos os seus projetos de andaimes,
+            escoramentos e containers, a Magna dispõe de um amplo
+            <strong>Departamento Técnico</strong>, atendendo às necessidades
+            específicas de cada cliente e otimizando custos.
+          </p>
+
+          ---
+
+          <h2>Nossa Missão</h2>
+          <p>
+            Locar equipamentos, contribuindo com o desenvolvimento
+            socioeconômico da região Nordeste, satisfazendo os clientes,
+            colaboradores e acionistas.
+          </p>
+
+          ---
+
+          <h2>Nossa Visão</h2>
+          <p>
+            Atuar em todas as capitais do Nordeste, sendo reconhecida pela
+            credibilidade e qualidade no atendimento, com foco em resultado.
+          </p>
+
+          ---
+
+          <h2>Nossos Valores</h2>
+          <ul>
+            <li>Foco</li>
+            <li>Credibilidade</li>
+            <li>Engajamento</li>
+            <li>Respeito</li>
+            <li>Transparência</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>© 2025 Minha Empresa. Todos os direitos reservados.</footer>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

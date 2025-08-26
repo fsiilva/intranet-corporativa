@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intranet Magna Locações - Lista de Ramais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<style>
+  :root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --border-color: #dee2e6;
+    --text-color: #212529;
+    --header-bg: #e9ecef;
+    --hover-bg: #e2e6ea;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+  }
+
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-light);
+  }
+
+  h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .controls label {
+    font-weight: 500;
+    color: var(--dark-gray);
+  }
+
+  .controls input[type="text"],
+  .controls select {
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    flex-grow: 1;
+    max-width: 300px;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    /* Ensures rounded corners apply to table */
+  }
+
+  .contact-table th,
+  .contact-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .contact-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .contact-table th:hover {
+    background-color: #0056b3;
+  }
+
+  .contact-table th.asc::after {
+    content: " ▲";
+    font-size: 0.8em;
+    position: absolute;
+    right: 8px;
+  }
+
+  .contact-table th.desc::after {
+    content: " ▼";
+    font-size: 0.8em;
+    position: absolute;
+    right: 8px;
+  }
+
+  .contact-table tbody tr:nth-child(even) {
+    background-color: var(--light-gray);
+  }
+
+  .contact-table tbody tr:hover {
+    background-color: var(--hover-bg);
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .contact-table a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .contact-table a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  .contact-table td:empty::before {
+    content: "-";
+    color: var(--secondary-color);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+
+    .controls {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .controls input[type="text"],
+    .controls select {
+      max-width: 100%;
+    }
+
+    .contact-table thead {
+      display: none;
+      /* Hide header on small screens */
+    }
+
+    .contact-table,
+    .contact-table tbody,
+    .contact-table tr,
+    .contact-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .contact-table tr {
+      margin-bottom: 15px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-table td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+      border: none;
+    }
+
+    .contact-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      width: calc(50% - 20px);
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: 500;
+      color: var(--dark-gray);
+    }
+
+    .contact-table td:last-child {
+      border-bottom: none;
+    }
+  }
+</style>
+
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="assets/img/LGML-perfil.jpg" alt="Logo da Empresa" />
+      Magna Locações
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="comunicacao.html" class="active">Comunicação</a></li>
+        <li><a href="rh.html">Recursos Humanos</a></li>
+        <li><a href="ti.html">TI & Suporte</a></li>
+        <li>
+          <a href="listaRamais.html">Lista de Ramais</a>
+        </li>
+        <li><a href="links.html">Links Úteis</a></li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="#">Diretório</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    <header>
+      <h1>Bem-vindo(a) à Intranet, Magna Locações</h1>
+
+    </header>
+
+    <section class="dashboard-grid">
+      <div class="card full-width">
+        <h1>Magna Locações - Politica de uso Celular</h1>
+        <div class="section">
+          <h2>Diretrizes da Política:</h2>
+          <p>Para alcançar os objetivos propostos, a política deve abordar os seguintes pontos:</p>
+
+          <h3>Horários e locais permitidos:</h3>
+          <p>Para o uso de celulares pessoais, o uso se restringe ao horário de almoço e descanso.</p>
+
+          <h3>Uso de aplicativos e redes sociais:</h3>
+          <p>A fim de otimizar nosso tempo e recursos, e garantir a máxima produtividade durante o expediente,
+            informamos
+            que o uso de redes sociais para fins pessoais será restrito durante o horário de trabalho.</p>
+          <p>A partir desta data, o acesso a plataformas como Facebook, Instagram, Twitter, TikTok e outras similares
+            está
+            proibido.</p>
+          <p>O uso do WhatsApp estará liberado exclusivamente para fins profissionais, através da plataforma WhatsApp
+            Web,
+            em dispositivos corporativos.</p>
+          <p>Esta medida visa assegurar que todos os colaboradores possam focar em suas responsabilidades e entregar o
+            melhor resultado possível para a empresa.</p>
+
+          <h3>Restrições:</h3>
+          <ul>
+            <li>O uso de celulares para fins pessoais deve ser minimizado durante o horário de trabalho.</li>
+            <li>Priorize as atividades relacionadas ao trabalho e utilize os intervalos para assuntos pessoais.</li>
+            <li>Evite o uso excessivo de redes sociais, jogos e outras distrações não relacionadas ao trabalho.</li>
+            <li>Mantenha o celular no modo silencioso ou vibratório para não perturbar o ambiente de trabalho.</li>
+          </ul>
+
+          <h3>Exceções:</h3>
+          <ul>
+            <li>O uso do WhatsApp para fins profissionais é permitido, preferencialmente na versão web.</li>
+            <li>Em casos de emergência pessoal, o uso do celular é permitido, mas deve ser breve e discreto mediante
+              autorização da gestão imediata.</li>
+          </ul>
+
+          <h3>Recomendações:</h3>
+          <ul>
+            <li>Utilize os intervalos para verificar mensagens e realizar chamadas pessoais.</li>
+            <li>Caso necessite realizar uma ligação pessoal importante, procure um local reservado mediante autorização
+              da
+              gestão imediata.</li>
+            <li>Respeite o ambiente de trabalho e evite conversas em voz alta ao telefone.</li>
+          </ul>
+
+          <h3>Objetivo:</h3>
+          <p>Esta política visa garantir que o tempo de trabalho seja dedicado às atividades profissionais, contribuindo
+            para a eficiência e o bom desempenho de todos.</p>
+        </div>
+
+        <div class="section">
+          <h2>Uso em emergências:</h2>
+
+          <h3>Definição de Emergência:</h3>
+          <ul>
+            <li>Situações que representem risco à vida, à saúde ou à segurança pessoal.</li>
+            <li>Necessidade de comunicação urgente com familiares em casos de incidentes graves.</li>
+            <li>Outras situações que exijam ação imediata e comunicação externa.</li>
+          </ul>
+
+          <h3>Diretrizes:</h3>
+          <ul>
+            <li>Em casos de emergência, o uso do celular é permitido para realizar ligações, enviar mensagens ou acessar
+              aplicativos relevantes.</li>
+            <li>Comunique seu supervisor ou colega de trabalho assim que possível sobre a emergência.</li>
+            <li>Em caso de emergências internas (acidentes de trabalho, incêndios, etc.), siga os protocolos de
+              segurança
+              da empresa e utilize os meios de comunicação designados.</li>
+            <li>O uso do celular para fins não emergenciais durante o horário de trabalho continua sujeito às políticas
+              da
+              empresa.</li>
+          </ul>
+
+          <p class="important">Importante:</p>
+          <p>O uso indevido do celular para fins não emergenciais durante o horário de trabalho pode acarretar medidas
+            disciplinares.</p>
+          <p>Esta política visa garantir que o uso do celular em emergências seja priorizado e que a comunicação seja
+            eficiente.</p>
+        </div>
+
+        <div class="section">
+          <h2>Necessidade de compra de equipamento:</h2>
+          <p>Com o objetivo de manter um ambiente de trabalho organizado e eficiente, informamos que a aquisição de
+            periféricos de áudio (fones de ouvido, microfones, etc.) para uso durante o expediente seguirá o seguinte
+            procedimento:</p>
+
+          <ol>
+            <li><strong>Necessidade:</strong> Caso o colaborador necessite utilizar periféricos de áudio para fins
+              profissionais, deverá justificar a necessidade ao seu gestor imediato.</li>
+            <li><strong>Solicitação:</strong> O gestor, após avaliar a necessidade, formalizará a solicitação de compra
+              junto ao departamento de compra.</li>
+            <li><strong>Aquisição:</strong> O departamento de compra realizará a aquisição do periférico, seguindo os
+              padrões e especificações da empresa.</li>
+          </ol>
+
+          <p class="important">Importante:</p>
+          <ul>
+            <li>A compra de periféricos de áudio para uso pessoal não será permitida.</li>
+            <li>A utilização de periféricos de áudio fornecidos pela empresa deverá seguir as normas de uso e segurança
+              estabelecidas.</li>
+          </ul>
+          <p>Esta medida visa garantir o uso adequado dos recursos da empresa e manter a padronização dos equipamentos
+            utilizados no ambiente de trabalho.</p>
+        </div>
+      </div>
+
+  </div>
+
+
+
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

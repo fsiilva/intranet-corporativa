@@ -1,0 +1,230 @@
+/* Import Google Fonts (se ainda não estiver no seu style.css) */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --primary-color: #007bff; /* Azul vibrante */
+  --secondary-color: #6c757d; /* Cinza escuro */
+  --background-light: #f8f9fa; /* Branco levemente acinzentado */
+  --text-dark: #343a40; /* Texto escuro */
+  --text-light: #ffffff; /* Texto claro */
+  --border-color: #dee2e6; /* Cor da borda */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--text-light);
+  margin: 40px 20px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px var(--shadow-light);
+  max-width: 900px;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 30px;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-color);
+  font-size: 2.5em;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* --- Novas Regras e Modificações para o Perfil do Colaborador --- */
+
+.collaborator-profile {
+  display: flex;
+  flex-direction: column; /* Para empilhar no mobile */
+  align-items: center; /* Centraliza a coluna no mobile */
+  gap: 30px; /* Espaçamento entre os elementos */
+  margin-bottom: 40px;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.collaborator-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Transforma a imagem em círculo */
+  object-fit: cover; /* Garante que a imagem preencha o círculo */
+  border: 5px solid var(--primary-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-info h2 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-dark);
+  font-size: 2.2em;
+  margin-bottom: 5px;
+}
+
+.profile-info .role {
+  font-size: 1.3em;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.area-info {
+  text-align: center;
+  width: 100%; /* Garante que ocupe a largura total */
+}
+
+.area-info h3 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-color);
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.area-name {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.area-description {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: var(--secondary-color);
+}
+
+.welcome-message-short p {
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.next-steps-mini {
+  margin-top: 30px;
+}
+
+.next-steps-mini h3 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-color);
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.next-steps-mini ul {
+  list-style: disc; /* Usar marcadores de disco */
+  padding-left: 25px; /* Recuo para os marcadores */
+  color: var(--text-dark);
+}
+
+.next-steps-mini ul li {
+  margin-bottom: 10px;
+  font-size: 1.05em;
+}
+
+/* --- Fim das Novas Regras --- */
+
+footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 30px;
+  color: var(--secondary-color);
+  font-size: 0.9em;
+}
+
+/* Responsividade Aprimorada */
+@media (min-width: 769px) {
+  .collaborator-profile {
+    flex-direction: row; /* Coloca foto e info lado a lado em telas maiores */
+    text-align: left;
+    align-items: flex-start; /* Alinha no topo */
+  }
+
+  .profile-header {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    width: auto; /* Deixa o conteúdo determinar a largura */
+  }
+
+  .profile-info {
+    text-align: left;
+  }
+
+  .area-info {
+    text-align: left;
+    width: 100%;
+    margin-left: 0; /* Remove a margem extra */
+  }
+
+  .area-info h3 {
+    display: block; /* Volta a borda ao normal */
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .profile-info h2 {
+    font-size: 1.8em;
+  }
+
+  .profile-info .role {
+    font-size: 1.1em;
+  }
+
+  .area-info h3 {
+    font-size: 1.6em;
+  }
+
+  .area-name {
+    font-size: 1.3em;
+  }
+
+  .container {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+}

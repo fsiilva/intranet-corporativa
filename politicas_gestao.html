@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intranet Magna Locações - Lista de Ramais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<style>
+  :root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --border-color: #dee2e6;
+    --text-color: #212529;
+    --header-bg: #e9ecef;
+    --hover-bg: #e2e6ea;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+  }
+
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-light);
+  }
+
+  h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .controls label {
+    font-weight: 500;
+    color: var(--dark-gray);
+  }
+
+  .controls input[type="text"],
+  .controls select {
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    flex-grow: 1;
+    max-width: 300px;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    /* Ensures rounded corners apply to table */
+  }
+
+  .contact-table th,
+  .contact-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .contact-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .contact-table th:hover {
+    background-color: #0056b3;
+  }
+
+  .contact-table th.asc::after {
+    content: " ▲";
+    font-size: 0.8em;
+    position: absolute;
+    right: 8px;
+  }
+
+  .contact-table th.desc::after {
+    content: " ▼";
+    font-size: 0.8em;
+    position: absolute;
+    right: 8px;
+  }
+
+  .contact-table tbody tr:nth-child(even) {
+    background-color: var(--light-gray);
+  }
+
+  .contact-table tbody tr:hover {
+    background-color: var(--hover-bg);
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .contact-table a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .contact-table a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  .contact-table td:empty::before {
+    content: "-";
+    color: var(--secondary-color);
+  }
+  table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+
+    .controls {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .controls input[type="text"],
+    .controls select {
+      max-width: 100%;
+    }
+
+    .contact-table thead {
+      display: none;
+      /* Hide header on small screens */
+    }
+
+    .contact-table,
+    .contact-table tbody,
+    .contact-table tr,
+    .contact-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .contact-table tr {
+      margin-bottom: 15px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-table td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+      border: none;
+    }
+
+    .contact-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      width: calc(50% - 20px);
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: 500;
+      color: var(--dark-gray);
+    }
+
+    .contact-table td:last-child {
+      border-bottom: none;
+    }
+  }
+</style>
+
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="assets/img/LGML-perfil.jpg" alt="Logo da Empresa" />
+      Magna Locações
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="comunicacao.html" class="active">Comunicação</a></li>
+        <li><a href="rh.html">Recursos Humanos</a></li>
+        <li><a href="ti.html">TI & Suporte</a></li>
+        <li>
+          <a href="listaRamais.html">Lista de Ramais</a>
+        </li>
+        <li><a href="links.html">Links Úteis</a></li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="#">Diretório</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    <header>
+      <h1>Bem-vindo(a) à Intranet, Magna Locações</h1>
+
+    </header>
+
+    <section class="dashboard-grid">
+      <div class="card full-width">
+        <h1>Magna Locações - Políticas de Gestão de Pessoas</h1>
+        <h2>1. HISTÓRICO DA MAGNA LOCAÇÕES</h2>
+        <p>A empresa Magna Locações foi fundada em 1982, na cidade de Fortaleza - CE, tendo como principal atividade a
+          locação de equipamentos para construção civil, entre os quais estão: containers, elevadores, escoramento,
+          andaimes, entre outros.</p>
+        <p>A Magna Locações possui 07 (sete) filiais: Recife (PE), Natal (RN), Mossoró (RN), João Pessoa (PB), São Luis
+          (MA), Juazeiro do Norte (CE) e Teresina (PI). Considerando a Matriz em Fortaleza e as filiais, contamos com
+          200 colaboradores.</p>
+        <p>Conheça o significado da Logomarca da Magna Locações: a logomarca tem o desenho de 02 (duas) pirâmides,
+          representando **Fortaleza e Inovação**. O nome **Magna** significa: grande, estável e confiável, concretizando
+          seu modelo de gestão interna, com seus colaboradores, e externa, com seus clientes.</p>
+
+        <h2>2. GESTÃO DOS COLABORADORES</h2>
+        <p>A gestão de colaboradores tem como objetivo o engajamento no planejamento e execução das atividades das
+          equipes e no alcance das metas estabelecidas, a serem atingidas através dos valores, normas e procedimentos da
+          empresa. Esta gestão compartilhada visa o desenvolvimento e crescimento conjunto dos colaboradores e da
+          empresa.</p>
+
+        <h2>3. GESTÃO DOS PROCESSOS (NORMAS E PROCEDIMENTOS)</h2>
+        <p>A gestão de processos é um conjunto de práticas que visam o aperfeiçoamento das atividades, buscando a
+          otimização do tempo e a redução de erros e custos. As principais práticas são: entender e padronizar os
+          processos; eliminar tarefas desnecessárias, reduzir custos, identificar não conformidades e promover melhorias
+          contínuas, aumentar a produtividade das equipes e aumentar a satisfação dos clientes.</p>
+
+        <h2>4. VALORES DA EMPRESA</h2>
+        <p>São as crenças e princípios da empresa que orientam negócios, comportamentos e decisões.</p>
+        <ol>
+          <li><strong>Otimização:</strong> Encoraja os colaboradores a sugerirem melhorias, implantar mudanças e
+            promover a redução de gastos e custos.</li>
+          <li><strong>Trabalho em Equipe:</strong> Atuar com colaboração, confiança e responsabilidade mútuas.</li>
+          <li><strong>Respeito:</strong> Respeitar as diferenças, visando a boa convivência, absorvendo as normas e
+            procedimentos internos.</li>
+          <li><strong>Transparência:</strong> Comunicação participativa entre gestão e equipe, integrada entre as áreas,
+            objetiva e transparente.</li>
+          <li><strong>Foco no Cliente:</strong> Entender que o Cliente é o principal pilar de uma empresa. Oferecer
+            atendimento ao cliente de forma agradável e satisfatória, entregando o produto ou serviço de acordo com o
+            Contrato assinado e realizar o pós-venda de forma que o Cliente permaneça por muito tempo.</li>
+        </ol>
+
+        <h2>5. MISSÃO, VISÃO E POLÍTICA DA QUALIDADE DA EMPRESA</h2>
+        <h3>Missão</h3>
+        <p>Locar equipamentos, contribuindo com o desenvolvimento sócio-econômico da região Nordeste, satisfazendo os
+          clientes, colaboradores e acionistas.</p>
+        <h3>Visão de Futuro</h3>
+        <p>Locar equipamentos para todas as capitais do Nordeste, sendo reconhecida pela credibilidade e qualidade no
+          atendimento.</p>
+        <h3>Política da Qualidade – Cumprimento das Normas e Procedimentos Padrões</h3>
+        <p>Locar equipamentos cumprindo os procedimentos definidos e buscando a melhoria contínua dos processos,
+          satisfazendo nossos clientes, colaboradores e acionistas.</p>
+
+        <h2>6. GESTÃO DE PESSOAS – RH/DP/SEGURANÇA/ADMINISTRAÇÃO</h2>
+        <h3>Admissão de Funcionários</h3>
+        <p>A área de Recursos Humanos é responsável pelo processo de recrutamento e seleção dos profissionais, em
+          conjunto com os gestores. Toda solicitação de recrutamento deverá ser formalizada através do formulário
+          **Autorização de Admissão e/ou Demissão**, devidamente assinado pelo gestor, Gerência e Diretoria, tanto para
+          as substituições, como para aumento de quadro. As admissões serão realizadas pelo DP nos dias 01 e 16 de cada
+          mês, de posse de todos os documentos do candidato. Temos como política interna não admitir parentes de
+          colaboradores para trabalharem no mesmo setor ou ter alguma subordinação.</p>
+        <h3>Período de Experiência do Contrato de Trabalho</h3>
+        <p>Dividido em 03 períodos: 30 dias, 60 dias e 90 dias de experiência. Durante este período, seu gestor irá
+          acompanhá-lo, orientando-o para seu melhor desenvolvimento e adaptação à empresa. Após cada período, você
+          receberá um feedback sobre seu desempenho e a continuidade ou não do contrato. Neste período é avaliada a
+          frequência e assiduidade do colaborador, desempenho nas tarefas, relacionamento com a equipe e superiores, e
+          compromisso com a segurança.</p>
+        <h3>Ocorrências Disciplinares</h3>
+        <p>Confiamos que os colaboradores irão cumprir com responsabilidade as Normas e Procedimentos da Empresa.
+          Qualquer exceção deverá ser comunicada aos gestores para análise e decisão de mudanças. Para colaboradores que
+          não cumprirem as normas e os procedimentos e não comunicarem as exceções aos gestores, serão aplicadas as
+          penalidades previstas na lei trabalhista: advertência verbal, advertência escrita, suspensão e demissão.</p>
+        <h3>Demissão de Funcionários</h3>
+        <p>As demissões serão realizadas no período de 01 a 14 do mês, através do formulário **Autorização de
+          Demissão**, assinado pelo gestor, Gerente e Diretoria da área. A norma interna é **Aviso Trabalhado**.
+          Qualquer exceção deverá ter a aprovação da Diretoria da área. No mês que antecede a data da Convenção Coletiva
+          dos Sindicatos, não poderemos realizar demissões, devido à exigência de pagamento de multa de 01 salário do
+          funcionário. Fica sob a responsabilidade do Gestor e RH/DP analisarem, antes da comunicação da demissão, se o
+          funcionário tem alguma estabilidade: Sindical, CIPA, Gestante e Acidente de Trabalho, como também, descontos
+          relacionados à área de Frota.</p>
+        <h3>Comunicação Interna</h3>
+        <p>A empresa tem como política uma Comunicação direta e transparente sobre suas políticas, normas e
+          procedimentos, bem como, processos de mudança. As reuniões entre gestores e equipes, como também, entre áreas,
+          ficam sob a responsabilidade dos gestores, para serem agendadas, visando maior integração e ajustes dos
+          processos, podendo ter o apoio do Recursos Humanos. É de responsabilidade da área de Recursos Humanos elaborar
+          e divulgar os Informativos sobre normas, procedimentos e mudanças ocorridas na empresa, através de e-mail e
+          Quadro de Aviso.</p>
+        <h3>Treinamento e Desenvolvimento dos Funcionários</h3>
+        <ul>
+          <li>O **Treinamento de Integração**, sobre as normas e políticas da empresa, é de responsabilidade da área de
+            Recursos Humanos e Segurança do Trabalho, realizado na data de admissão do funcionário, na Matriz. Nas
+            filiais, este treinamento fica sob a responsabilidade dos gestores.</li>
+          <li>O **Treinamento na Função**, sobre as tarefas e processos de suas atividades a serem realizadas de acordo
+            com o cargo, é de responsabilidade do Gestor, que deverá treinar o funcionário novato através dos
+            Procedimentos Operacionais. Quando ocorrer mudança de Procedimentos do setor, fica sob a responsabilidade do
+            Gestor realizar o treinamento dos novos procedimentos.</li>
+          <li>Os **Treinamentos Específicos** necessários por lei ou exigidos por clientes (NR-35, NR-10, Contabilidade,
+            Leis Trabalhistas, Manutenção de Equipamentos, Operação de Máquinas, etc) deverão ser solicitados à área de
+            RH para análise e aprovação junto à Diretoria.</li>
+          <li>Os treinamentos de desenvolvimento dos colaboradores, necessários para suas promoções, visando o
+            crescimento no plano de carreira, o custo ficará 50% para a empresa e 50% para o colaborador, os quais
+            deverão ser analisados junto à área de RH e aprovados pela Diretoria.</li>
+        </ul>
+        <h3>Plano de Carreira e Mudança de Função</h3>
+        <p>Cada função possui uma **Descrição de Cargo**, descrevendo o perfil técnico, comportamental,
+          responsabilidades e atividades a serem executadas. Existe também uma **Tabela Salarial Interna**, tendo como
+          salário inicial o piso salarial da Categoria do Sindicato dos Metalúrgicos. Cada cargo possui 04 faixas
+          salariais. A política de remuneração prevê as promoções horizontais (permanece no mesmo cargo) e as promoções
+          verticais (mudança de cargo). As contratações, treinamentos e promoções deverão ocorrer com base no Plano de
+          Cargos. Os gestores devem ficar atentos ao desvio de função, ou seja, caso queiram treinar os funcionários
+          para assumirem novas atribuições que correspondam a outro cargo, devem em um prazo de 90 dias, rever com a
+          área de RH a mudança de função. A mudança de função somente será oficializada na folha de pagamento após a
+          realização do Exame Médico, com a nova função, e através do Formulário **Autorização de Movimentação de
+          Pessoal**, autorizado pelo Gestor, RH e Diretoria.</p>
+        <h3>Avaliação de Desempenho</h3>
+        <p>Realizar de 02 em 02 anos (NOVEMBRO) a **Avaliação de Desempenho** de todos os funcionários. O Formulário de
+          Avaliação contemplará 06 Competências por cargo (Operacional, Técnico-Administrativo e de Gestão). Esta
+          avaliação tem o objetivo de criar um momento formal entre o gestor e o subordinado para informar sobre seu
+          desempenho e definir alguma necessidade específica de treinamento. As avaliações deverão também servir de base
+          para as promoções horizontais e verticais no plano de carreira do funcionário.</p>
+        <h3>Pesquisa de Clima Organizacional</h3>
+        <p>A área de RH deverá realizar de dois em dois anos uma pesquisa de clima junto aos funcionários, para que
+          estes possam opinar sobre a gestão atual da empresa e apresentar melhorias. Esta pesquisa deve ser realizada
+          em novembro.</p>
+
+        <h2>6. DEPARTAMENTO DE PESSOAL</h2>
+        <h3>Horário de Trabalho</h3>
+        <ul>
+          <li><strong>Entrada do Expediente:</strong> 07h e 30min. O ponto de entrada somente poderá ser registrado pelo
+            funcionário a partir de 07h e 30min. Antes deste horário não é permitido fazer registro de ponto.</li>
+          <li><strong>Saída do Expediente:</strong> 17h e 30min de segunda a quinta-feira. Sexta-feira, o expediente
+            encerra às 16:30 horas. O ponto de saída somente poderá ser registrado pelo funcionário até às 17h e 35min
+            ou 16h e 35min, nas sextas-feiras.</li>
+          <li><strong>Atrasos e Saídas Antecipadas:</strong> Os funcionários que chegarem atrasados, após 05 minutos
+            para o 1º expediente, ou tiverem sua saída antecipada autorizada pelo gestor por motivos particulares, terão
+            estes minutos/horas descontados, conforme determinação da lei trabalhista. Somente serão abonados os atrasos
+            e faltas justificados (atestado médico, documentação judicial, licença maternidade/paternidade, doação de
+            sangue, etc).</li>
+        </ul>
+        <h3>Controle do Ponto</h3>
+        <p>O Registro de Ponto Eletrônico tem tolerância/dia de 10 minutos, sendo 05 minutos na entrada e 05 minutos na
+          saída, de acordo com a CLT e Convenção Coletiva. Todos os cargos, exceto Gerentes, deverão registrar o ponto.
+          Os atrasos e faltas injustificados serão descontadas do funcionário na folha de pagamento. As faltas
+          Justificadas deverão ser formalizadas ao Dep. Pessoal, através de cópia do Atestado Médico ou outro documento
+          legal, em 24 horas, para lançamento no sistema da folha de pagamento. Não é aceito fotos destes documentos
+          legais através do WhatSaap. As empresas que utilizam o Livro de Ponto devem garantir a assinatura diária do
+          funcionário no horário de entrada e saída. O intervalo para refeição, de 01 (uma) hora, não é registrado no
+          ponto eletrônico nem no livro, mas o funcionário deve cumpri-lo rigorosamente e o Gestor deve acompanhar o
+          cumprimento desta norma.</p>
+        <h3>Compensação de Horas Extras</h3>
+        <p>Horas extras só podem ser realizadas pelos funcionários se aprovadas antecipadamente pelo Gestor da área.
+          Conforme a Reforma Trabalhista de Novembro 2017, até 44 horas extras no mês, as mesmas poderão ser
+          compensadas. Em caso de pagamento de horas extras, o valor será calculado de acordo com a CLT, ou seja, 50% de
+          segunda a sábado e 100% domingos e feriados. Exceção para o que determina a Convenção Coletiva em cada cidade
+          onde temos Filiais ML. O máximo de hora extra que pode ser registrado por dia/funcionário é 02 (duas) horas,
+          tanto no relógio de ponto como no Livro de Ponto. E de acordo com a Nova Reforma Trabalhista, vigente a partir
+          de Novembro/2019, estas horas extras podem ser compensadas, conforme abaixo:</p>
+        <ul>
+          <li><strong>Banco de Horas:</strong> Será pactuado acordo individual (documento a ser assinado entre o
+            funcionário e a empresa, concordando em compensar as horas trabalhadas e permitidas por lei, no mês), com
+            prazo de até 06 meses e sem homologação no Sindicato, ou por acordo coletivo com prazo de até 01 (um) ano e
+            homologação do acordo coletivo no Sindicato.</li>
+          <li><strong>Tempo de Trabalho:</strong> Não será considerado tempo de trabalho o período em que o funcionário
+            estiver na empresa em atividades de descanso, estudo, alimentação, interação entre colegas, higiene pessoal
+            e troca de uniforme.</li>
+          <li><strong>Deslocamento até a empresa:</strong> O tempo despendido até o local de trabalho e deste até a
+            residência, por qualquer meio de transporte, inclusive fornecido pela empresa, não será computado como
+            jornada de trabalho.</li>
+        </ul>
+        <h3>Férias</h3>
+        <p>Conforme determina a lei trabalhista, as férias poderão ser divididas em até 03 períodos, sendo que nenhum
+          deles poderá ter menos do que 05 (cinco) dias. E um destes períodos deve ser maior ou igual a 14 dias. As
+          férias dos colaboradores deverão ser programadas pelos gestores, preferencialmente no final do ano, carnaval,
+          semana santa e demais feriados do ano, de acordo com o vencimento das férias dos mesmos. A empresa não compra
+          dias de férias, exceção para os 10 (dias) permitidos por lei (abono pecuniário), após análise e aprovação da
+          Diretoria, para realização de algum serviço imprevisto.</p>
+        <h3>Uniformes</h3>
+        <p>Têm direito a receber Uniforme fornecido pela empresa:</p>
+        <ul>
+          <li>Cargos Operacionais</li>
+          <li>Motoristas</li>
+          <li>Operador de Empilhadeira</li>
+          <li>Encarregado Operacional</li>
+          <li>Almoxarife</li>
+          <li>Porteiro</li>
+          <li>Técnico de Segurança</li>
+        </ul>
+        <p>Os cargos administrativos não recebem uniforme da empresa. Todos deverão usar seu **Crachá de
+          Identificação**, exceção para os cargos que trabalham movimentando equipamentos e operando máquinas, para
+          evitar acidentes. Os funcionários Administrativos deverão atender alguns critérios de uso de roupa: não usar
+          vestidos curtos, não usar roupas de alça, camisetas muito cavadas e transparentes, não usar shorts e não usar
+          sandálias rasteiras (tipo havaianas).</p>
+        <h3>Empréstimo aos funcionários (saúde)</h3>
+        <p>A empresa autoriza empréstimo aos funcionários, com desconto em folha, somente em casos de saúde. No caso de
+          acidente de trabalho, a empresa fornece os medicamentos necessários para o tratamento.</p>
+        <h3>Prazos da Folha de Pagamento</h3>
+        <p>O cálculo da folha de pagamento do mês é feito considerando as ocorrências do período de 01 a 30 ou 31 do mês
+          vigente. A empresa paga 40% do salário do funcionário todo dia 15 do mês. A segunda quinzena, correspondente
+          aos 60% do salário, é paga até o 5º dia útil do mês seguinte. Na segunda quinzena de pagamento, estarão
+          constando os descontos legais devidos, conforme lei trabalhista (INSS, Vale Transporte, Plano de
+          Saúde/Odontológico, Descontos devidos, etc).</p>
+        <h3>Descontos em Folha de Pagamento</h3>
+        <p>Os valores a serem descontados da folha dos funcionários, decorrentes de danos causados à empresa, pelos
+          motivos de atraso de boletos de pagamentos, perda de equipamentos, não realização de tarefas legais
+          obrigatórias, multas de trânsito, ligações telefônicas excedentes, uso excedente de combustível e outros
+          deverão ser informados pelas áreas responsáveis até o dia 10 de cada mês ao Departamento de Pessoal. Os
+          valores dos descontos serão enviados ao Dep. De Pessoal no Formulário **Autorização de Desconto**. Em caso de
+          desconto de funcionários por perda de material de estoque, com evidência de divergência no Estoque, os
+          descontos deverão ser formalizados ao DP através deste mesmo formulário, com a devida assinatura do
+          funcionário, autorizando o desconto em folha.</p>
+        <h3>Avarias e colisões nos carros da empresa</h3>
+        <p>O funcionário que acarretar AVARIA nos veículos da empresa ficará responsável pelo valor do reparo. Em caso
+          de COLISÃO, o funcionário assume 100% do valor da manutenção, limitado até 02 (dois salários) do mesmo.
+          Ultrapassando este valor, a empresa assume 50% do valor restante e o funcionário os outros 50%, parcelado em
+          folha de pagamento.</p>
+        <h3>Refeição</h3>
+        <p>A empresa fornece refeição interna (café da manhã e almoço), com desconto mensal do funcionário de R$ 1,00 na
+          ML. O valor da refeição externa é de R$ 25,00 dependendo da localização. A área Comercial ao fechar contrato
+          com serviço externo deverá incluir no contrato de pedido o fornecimento de almoço, no Cliente. As áreas
+          internas que realizam atendimento de clientes externos deverão realizar rodízio no horário de refeição, não
+          podendo a área ficar sem nenhum funcionário para atender clientes e fornecedores no intervalo do almoço.</p>
+        <h3>Plano de Saúde e Odontológico</h3>
+        <p>Terá direito ao Plano HapVida, o funcionário + 03 dependentes, totalizando 04 pessoas. A empresa contribui
+          com 30% do plano básico, Nosso Plano, e o funcionário com 70% para cada usuário do mesmo. Os funcionários
+          contribuem também com 30% dos valores das consultas e exames (coparticipação) de cada usuário do Plano. Caso o
+          funcionário faça opção por outro tipo de plano HapVida, a empresa se responsabiliza com o valor de 30% do
+          valor do Nosso Plano, ficando a diferença sob a responsabilidade do funcionário. Os funcionários que estão
+          afastados pelo INSS, deverão realizar o pagamento da sua participação financeira do plano de
+          saúde/odontológico até o dia 10 de cada mês. Caso não realize este pagamento na data prevista, o plano de
+          saúde será cancelado. O Plano Odontológico MaisOdonto é 100% de responsabilidade financeira do funcionário.
+        </p>
+
+        <h2>7. POLÍTICAS ADMINISTRATIVAS</h2>
+        <h3>Uso de Roupa Pessoal</h3>
+        <p>Não é permitido trabalhar usando roupas transparentes, saias e vestidos curtos, shorts, roupas muito
+          decotadas, roupas com alças e chinelos.</p>
+        <h3>Uso de Fone de Ouvido e Celular Particular</h3>
+        <p>Não é permitido trabalhar utilizando fone de ouvido para ouvir música. O celular particular e redes sociais
+          particulares deverão ser utilizados somente em caso de necessidades, evitando perda de produtividade e falta
+          de atenção ao trabalho.</p>
+        <h3>Economia de Energia e Papel</h3>
+        <ol>
+          <li>Planejar as atividades para que as mesmas possam ser realizadas durante o horário normal de trabalho,
+            evitando se estender após o término do expediente, o que ocasiona maior consumo de energia (lâmpadas, ar
+            condicionado e computador).</li>
+          <li>Desligar o ar condicionado da sala às 12:00 horas e religar somente às 13:00 horas, no retorno do
+            intervalo do almoço.</li>
+          <li>Todos os ar condicionados deverão ser desligados às 17:20 horas, para economizar energia no horário de
+            pico, onde a energia é 50% mais cara.</li>
+          <li>Durante o intervalo do almoço, desligar as lâmpadas das salas ao saírem para o almoço. Caso permaneçam na
+            sala durante o intervalo do almoço e tenha luz natural, manter as lâmpadas apagadas neste intervalo.</li>
+          <li>Reutilizar papel A4 para impressões internas. Usar ao máximo papel rascunho. Imprimir frente e verso.</li>
+        </ol>
+        <h3>Entrada e Saída de Funcionários</h3>
+        <p>Todo funcionário deverá entrar e sair da empresa pela **Portaria de Funcionários**. Não é permitida a entrada
+          e a saída dos funcionários pelo portão da Logística, o qual é destinado exclusivamente para o fluxo de carros.
+          Mesmo que o portão esteja aberto durante o horário de trabalho, não é permitido este fluxo de pessoas. Os
+          funcionários operacionais não poderão utilizar o celular particular no horário do trabalho, o mesmo deverá
+          ficar no armário do vestiário com seus pertences particulares, podendo ser utilizado no horário do almoço.</p>
+
+        <h2>8. POLÍTICAS SOCIAIS</h2>
+        <p>Internamente, a empresa realiza eventos em comemoração as datas abaixo:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>EVENTO</th>
+              <th>MÊS</th>
+              <th>EVENTO REALIZADO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DIA DA MULHER</td>
+              <td>MARÇO</td>
+              <td>INFORMATIVO E BRINDE</td>
+            </tr>
+            <tr>
+              <td>DIA DO TRABALHO</td>
+              <td>MAIO</td>
+              <td>INFORMATIVO</td>
+            </tr>
+            <tr>
+              <td>FESTA JUNINA</td>
+              <td>JUNHO</td>
+              <td>CAFÉ DA MANHÃ JUNINO</td>
+            </tr>
+            <tr>
+              <td>OUTUBRO ROSA</td>
+              <td>OUTUBRO</td>
+              <td>DIÁLOGO DE SEGURANÇA, LANCHE, BRINDE</td>
+            </tr>
+            <tr>
+              <td>NOVEMBRO AZUL</td>
+              <td>NOVEMBRO</td>
+              <td>DIÁLOGO DE SEGURANÇA, LANCHE, BRINDE</td>
+            </tr>
+            <tr>
+              <td>NATAL E ANO NOVO</td>
+              <td>DEZEMBRO</td>
+              <td>CESTA DE NATAL E CONFRATERNIZAÇÃO</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Externamente, a empresa contribui com algumas atividades sociais e esportivas do Bairro Aerolândia,
+          contribuindo com a comunidade local.</p>
+
+        <h2>9. SEGURANÇA DO TRABALHO</h2>
+        <h3>Política de Segurança e Saúde do Trabalho</h3>
+        <ul>
+          <li>Preservar a saúde e integridade dos colaboradores através da prevenção de acidentes e doenças
+            ocupacionais;</li>
+          <li>Prover treinamentos adequados aos funcionários, assegurando que os mesmos possam desempenhar seu trabalho
+            de forma segura;</li>
+          <li>Identificar e eliminar todo risco potencial à integridade física e à saúde dos colaboradores e visitantes;
+          </li>
+          <li>O colaborador é responsável pela preservação de sua segurança em cada tarefa realizada.</li>
+        </ul>
+        <h3>Utilização e Controle de EPI – Equipamento de Proteção Individual</h3>
+        <p>A empresa fornece ao funcionário os EPIs necessários à realização de suas atividades e cargo correspondente.
+          Existe tabela padrão de EPI por cargo, como também, tempo de validade dos mesmos. Em caso de perda de EPI sob
+          a responsabilidade do funcionário, o valor correspondente será descontado em folha, conforme determinação da
+          lei trabalhista. A guarda do EPI é responsabilidade do funcionário. A substituição dos EPIs deve obedecer ao
+          prazo de validade dos mesmos e através do Registro na Ficha de EPI de cada funcionário. O Almoxarifado somente
+          deve entregar o novo EPI após receber o antigo do funcionário. Em caso de perda de EPI por negligência do
+          funcionário, o valor do EPI será cobrado do funcionário. A substituição de Uniforme e sapato somente poderá
+          ser realizado pelo Almoxarifado após avaliação do Técnico de Segurança e, na ausência deste, após autorização
+          do Gestor direto do funcionário. O funcionário ao ser desligado deverá entregar seu Uniforme no Almoxarifado
+          para concluir o processo rescisório.</p>
+
+        <h2>10. SEGURANÇA DA INFORMAÇÃO (TECNOLOGIA DA INFORMAÇÃO)</h2>
+        <p>A empresa trabalha com Sistemas Informatizados e Integrados, através de senhas e acessos liberados após as
+          devidas autorizações. A administração dos dados da empresa é feita pela área de Tecnologia da Informação e
+          estes dados são de posse da empresa, não podendo ser repassadas a terceiros sem as devidas autorizações. As
+          informações dos documentos pessoais dos funcionários e dos clientes são reservadas ao uso da área de Recursos
+          Humanos e Comercial, garantindo o cumprimento da **Lei de Proteção dos Dados Pessoais**.</p>
+
+        <p>Márcia Caldas<br>Gestão de RH</p>
+
+
+      </div>
+  </div>
+
+
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

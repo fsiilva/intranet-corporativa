@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intranet Magna Locações - Lista de Ramais</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+  </head>
+  <style>
+      :root {
+        --primary-color: #007bff;
+        --secondary-color: #6c757d;
+        --light-gray: #f8f9fa;
+        --dark-gray: #343a40;
+        --border-color: #dee2e6;
+        --text-color: #212529;
+        --header-bg: #e9ecef;
+        --hover-bg: #e2e6ea;
+        --shadow-light: rgba(0, 0, 0, 0.1);
+      }
+
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px var(--shadow-light);
+      }
+
+      h1 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-weight: 700;
+      }
+
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 25px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .controls label {
+        font-weight: 500;
+        color: var(--dark-gray);
+      }
+
+      .controls input[type="text"],
+      .controls select {
+        padding: 10px 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        font-size: 1rem;
+        flex-grow: 1;
+        max-width: 300px;
+      }
+
+      .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .contact-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        overflow: hidden; /* Ensures rounded corners apply to table */
+      }
+
+      .contact-table th,
+      .contact-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .contact-table th {
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .contact-table th:hover {
+        background-color: #0056b3;
+      }
+
+      .contact-table th.asc::after {
+        content: " ▲";
+        font-size: 0.8em;
+        position: absolute;
+        right: 8px;
+      }
+
+      .contact-table th.desc::after {
+        content: " ▼";
+        font-size: 0.8em;
+        position: absolute;
+        right: 8px;
+      }
+
+      .contact-table tbody tr:nth-child(even) {
+        background-color: var(--light-gray);
+      }
+
+      .contact-table tbody tr:hover {
+        background-color: var(--hover-bg);
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .contact-table a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+      }
+
+      .contact-table a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
+
+      .contact-table td:empty::before {
+        content: "-";
+        color: var(--secondary-color);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .container {
+          padding: 15px;
+        }
+
+        .controls {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .controls input[type="text"],
+        .controls select {
+          max-width: 100%;
+        }
+
+        .contact-table thead {
+          display: none; /* Hide header on small screens */
+        }
+
+        .contact-table,
+        .contact-table tbody,
+        .contact-table tr,
+        .contact-table td {
+          display: block;
+          width: 100%;
+        }
+
+        .contact-table tr {
+          margin-bottom: 15px;
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-table td {
+          text-align: right;
+          padding-left: 50%;
+          position: relative;
+          border: none;
+        }
+
+        .contact-table td::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 10px;
+          width: calc(50% - 20px);
+          padding-right: 10px;
+          white-space: nowrap;
+          text-align: left;
+          font-weight: 500;
+          color: var(--dark-gray);
+        }
+
+        .contact-table td:last-child {
+          border-bottom: none;
+        }
+      }
+    </style>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="assets/img/LGML-perfil.jpg" alt="Logo da Empresa" />
+        Magna Locações
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="comunicacao.html" class="active">Comunicação</a></li>
+          <li><a href="rh.html">Recursos Humanos</a></li>
+          <li><a href="ti.html">TI & Suporte</a></li>
+          <li>
+            <a href="listaRamais.html">Lista de Ramais</a>
+          </li>
+          <li><a href="links.html">Links Úteis</a></li>
+          <li><a href="#">Eventos</a></li>
+          <li><a href="#">Diretório</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+      <header>
+        <h1>Bem-vindo(a) à Intranet, Magna Locações</h1>
+        
+      </header>
+
+      <section class="dashboard-grid">
+        <div class="card full-width">
+          <h1>Magna Locações - Lista de Contatos</h1>
+
+      
+      </div>
+    </div>
+
+   
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RELAÇÃO DAS IMPRESSORAS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-bg-color: #f4f7f6;
+        --secondary-bg-color: #e0e0e0;
+        --text-color: #333;
+        --header-bg-color: #4a90e2; /* A more modern blue */
+        --header-text-color: #ffffff;
+        --border-color: #ccc;
+        --table-header-bg: #cccccc;
+        --table-row-even: #f9f9f9;
+        --table-row-odd: #ffffff;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: var(--primary-bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 30px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      h1 {
+        text-align: center;
+        color: var(--header-bg-color);
+        margin-bottom: 30px;
+        font-size: 1.8em;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--border-color);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        overflow: hidden; /* Ensures border-radius applies to children */
+      }
+
+      table th,
+      table td {
+        padding: 12px 15px;
+        border: 1px solid var(--border-color);
+        text-align: left;
+        font-size: 0.95em;
+      }
+
+      table th {
+        background-color: var(--table-header-bg);
+        color: var(--text-color);
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      table tr:nth-child(even) {
+        background-color: var(--table-row-even);
+      }
+
+      table tr:nth-child(odd) {
+        background-color: var(--table-row-odd);
+      }
+
+      table tr:hover {
+        background-color: #eef;
+      }
+
+      table td a {
+        color: var(--header-bg-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      table td a:hover {
+        text-decoration: underline;
+        color: #3366cc; /* A slightly darker blue on hover */
+      }
+
+      .table-title {
+        background-color: var(--header-bg-color);
+        color: var(--header-text-color);
+        text-align: center;
+        font-weight: bold;
+        padding: 15px;
+        font-size: 1.2em;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .container {
+          margin: 15px auto;
+          padding: 15px;
+        }
+
+        table th,
+        table td {
+          padding: 10px;
+          font-size: 0.85em;
+        }
+
+        .table-title {
+          font-size: 1em;
+          padding: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+
+        table thead,
+        table tbody,
+        table th,
+        table td,
+        table tr {
+          display: block;
+        }
+
+        table thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+
+        table tr {
+          margin-bottom: 10px;
+          border: 1px solid var(--border-color);
+          border-radius: 5px;
+        }
+
+        table td {
+          border: none;
+          border-bottom: 1px solid var(--border-color);
+          position: relative;
+          padding-left: 50%;
+          text-align: right;
+        }
+
+        table td:before {
+          content: attr(data-label);
+          position: absolute;
+          left: 6px;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap;
+          text-align: left;
+          font-weight: bold;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>RELAÇÃO DE IMPRESSORAS MAGNA LOCAÇÕES</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="6" class="table-title">
+              Impressoras Magna Locações - Escritório
+            </th>
+          </tr>
+          <tr>
+            <th>MARCA</th>
+            <th>Nº SÉRIE</th>
+            <th>MODELO</th>
+            <th>TONNER</th>
+            <th>SETORES ATENDIDOS</th>
+            <th>IP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">VR97Z22643</td>
+            <td data-label="MODELO">ECOSYS M2040dn</td>
+            <td data-label="TONNER">Tk-1175</td>
+            <td data-label="SETORES ATENDIDOS">ALMOXARIFADO</td>
+            <td data-label="IP">
+              <a href="http://192.168.200.154/">192.168.200.154</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">NXM4300373</td>
+            <td data-label="MODELO">FS-6525MFP</td>
+            <td data-label="TONNER">TK-477</td>
+            <td data-label="SETORES ATENDIDOS">COMERCIAL</td>
+            <td data-label="IP">
+              <a href="http://192.168.200.68/">192.168.200.68</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">VR99355454</td>
+            <td data-label="MODELO">ECOSYS M2040dn</td>
+            <td data-label="TONNER">Tk-1175</td>
+            <td data-label="SETORES ATENDIDOS">OFICINA</td>
+            <td data-label="IP">
+              <a href="http://192.168.200.95/">192.168.200.95</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">LZK5434533</td>
+            <td data-label="MODELO">ECOSYS M2035dn</td>
+            <td data-label="TONNER">Tk-1147</td>
+            <td data-label="SETORES ATENDIDOS">FINANCEIRO</td>
+            <td data-label="IP">
+              <a href="http://192.168.200.70/">192.168.200.70</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">VR97X19956</td>
+            <td data-label="MODELO">ECOSYS M2040dn</td>
+            <td data-label="TONNER">Tk-1175</td>
+            <td data-label="SETORES ATENDIDOS">COMPRAS</td>
+            <td data-label="IP">
+              <a href="http://192.168.200.152/">192.168.200.152</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">Q653562521</td>
+            <td data-label="MODELO">FS-1370DN</td>
+            <td data-label="TONNER">Tk-172</td>
+            <td data-label="SETORES ATENDIDOS">JURIDICO</td>
+            <td data-label="IP">
+              <a href="http://192.168.200.150/">192.168.200.150</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">LZK5538971</td>
+            <td data-label="MODELO">ECOSYS M2035dn</td>
+            <td data-label="TONNER">Tk-1147</td>
+            <td data-label="SETORES ATENDIDOS">RH/DP</td>
+            <td data-label="IP">
+              <a href="http://192.168.200.55/">192.168.200.55</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">N8S1600269</td>
+            <td data-label="MODELO">TASKalfa 255</td>
+            <td data-label="TONNER">TK-477</td>
+            <td data-label="SETORES ATENDIDOS">PROJETOS</td>
+            <td data-label="IP">
+              <a href="http://192.168.200.99/">192.168.200.99</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="6" class="table-title">Filiais Magna Locações</th>
+          </tr>
+          <tr>
+            <th>MARCA</th>
+            <th>Nº SÉRIE</th>
+            <th>MODELO</th>
+            <th>TONNER</th>
+            <th>SETORES ATENDIDOS</th>
+            <th>IP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">VRA9815690</td>
+            <td data-label="MODELO">ECOSYS M2640idw</td>
+            <td data-label="TONNER">TK-1175</td>
+            <td data-label="SETORES ATENDIDOS">FILIAL JOÃO PESSOA</td>
+            <td data-label="IP">
+              <a href="http://192.168.204.110/">192.168.204.110</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">NW22802629</td>
+            <td data-label="MODELO">FS 1135</td>
+            <td data-label="TONNER">Tk-1147</td>
+            <td data-label="SETORES ATENDIDOS">FILIAL RECIFE</td>
+            <td data-label="IP">
+              <a href="http://192.168.203.197/">192.168.203.197</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">VRA7102178</td>
+            <td data-label="MODELO">ECOSYS M2640idw</td>
+            <td data-label="TONNER">TK-1175</td>
+            <td data-label="SETORES ATENDIDOS">FILIAL MOSSORÓ</td>
+            <td data-label="IP">
+              <a href="http://192.168.201.10/">192.168.201.10</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">LZK6X75486</td>
+            <td data-label="MODELO">ECOSYS M2035dn</td>
+            <td data-label="TONNER">Tk-1147</td>
+            <td data-label="SETORES ATENDIDOS">FILIAL SÃO LUIZ</td>
+            <td data-label="IP">
+              <a href="http://192.168.205.196/">192.168.205.196</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">LZK6973662</td>
+            <td data-label="MODELO">ECOSYS M2035dn</td>
+            <td data-label="TONNER">Tk-1147</td>
+            <td data-label="SETORES ATENDIDOS">FILIAL NATAL</td>
+            <td data-label="IP">
+              <a href="http://192.168.202.196/">192.168.202.196</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">LZK6972903</td>
+            <td data-label="MODELO">ECOSYS M2035dn</td>
+            <td data-label="TONNER">Tk-1147</td>
+            <td data-label="SETORES ATENDIDOS">FILIAL CARIRI</td>
+            <td data-label="IP">
+              <a href="http://192.168.206.10/">192.168.206.10</a>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="MARCA">KYOCERA</td>
+            <td data-label="Nº SÉRIE">VR93818932</td>
+            <td data-label="MODELO">ECOSYS M2040dn</td>
+            <td data-label="TONNER">Tk-1175</td>
+            <td data-label="SETORES ATENDIDOS">FILIAL TERESINA</td>
+            <td data-label="IP">
+              <a href="http://192.168.207.251/">192.168.207.251</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
