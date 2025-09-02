@@ -1,18 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Lista de aniversariantes (você pode carregar isso de um JSON, API, etc.)
   const aniversariantes = [
-    { nome: "Eliano Silva", data: "01/07" },
-    { nome: "Francisco Das Chagas", data: "05/07" }, // Aniversariante de hoje (exemplo)
-    { nome: "Francisco Rodrigues", data: "15/07" },
-    { nome: "Ney Ralison", data: "20/07" },
-    { nome: "Isaac Silva", data: "20/07" },
-    { nome: "Onofre da Silva", data: "21/07" },
-    { nome: "Francisco das Chagas Souza", data: "22/07" },
-    { nome: "Felipe Teles", data: "25/07" },
-    { nome: "Pedro Freitas", data: "29/07" },
-    { nome: "Bruno Rodrigues", data: "09/07" },
-    { nome: "Genildo Costa", data: "20/07" },
-    { nome: "Edmilson Silva", data: "20/07" },
+    { nome: "ELISANDRA GOMES", data: "03/09" },
+    { nome: "MÁRCIA CALDAS", data: "06/09" },
+    { nome: "JEFFERSON DA SILVA", data: "06/09" },
+    { nome: "ANTÔNIO MARCOS", data: "10/09" },
+    { nome: "JERÔNIMO DA SILVA", data: "19/09" },
+    { nome: "EDUARDO FERNANDES", data: "22/09" },
+    { nome: "MÁRCIO LEITE", data: "28/09" },
+    { nome: "JOSÉ COSTA", data: "29/09" },
+    { nome: "JOSÉ EXPEDITO", data: "05/09" },
+    { nome: "GILMAR GOME", data: "14/09" },
+    { nome: "THIAGO PIRES", data: "16/09" },
+    { nome: "ANTÔNIO VAGON", data: "22/09" },
+    { nome: "VICTOR EMANUEL", data: "25/09" },
+    { nome: "MARCUS FELIPE", data: "26/09" },
   ];
 
   const destaqueDiv = document.getElementById("destaque");

@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Lista de aniversariantes (você pode carregar isso de um JSON, API, etc.)
   const aniversariantes = [
-    { nome: "RAIMUNDO NONATO", data: "06/08" },
-    { nome: "IRANILSON FAUSTO", data: "07/08" },
-    { nome: "CARLOS ALEXANDRE", data: "08/08" },
-    { nome: "FRANCISCO FABRICIO", data: "10/08" },
-    { nome: "RAFAEL COSTA", data: "21/08" },
-    { nome: "JOSE VALDEMAR", data: "26/08" },
-    { nome: "CÉSAR JUCÁ", data: "27/08" },
-    { nome: "ELIAS MORAIS", data: "28/08" },
-    { nome: "SIDNEY MACIEL", data: "29/08" },
-    { nome: "DJAMILTON DORO", data: "04/08" },
-    { nome: "MIKAELLY JOYCE", data: "15/08" },
-    { nome: "THAMIRES CONSTÂNCIO", data: "15/08" },
-    { nome: "DÉBORA MELO", data: "24/08" },
-    { nome: "JAMILE TORRES", data: "29/08" },
+    { nome: "ELISANDRA GOMES", data: "03/09" },
+    { nome: "MÁRCIA CALDAS", data: "06/09" },
+    { nome: "JEFFERSON DA SILVA", data: "06/09" },
+    { nome: "ANTÔNIO MARCOS", data: "10/09" },
+    { nome: "JERÔNIMO DA SILVA", data: "19/09" },
+    { nome: "EDUARDO FERNANDES", data: "22/09" },
+    { nome: "MÁRCIO LEITE", data: "28/09" },
+    { nome: "JOSÉ COSTA", data: "29/09" },
+    { nome: "JOSÉ EXPEDITO", data: "05/09" },
+    { nome: "GILMAR GOME", data: "14/09" },
+    { nome: "THIAGO PIRES", data: "16/09" },
+    { nome: "ANTÔNIO VAGON", data: "22/09" },
+    { nome: "VICTOR EMANUEL", data: "25/09" },
+    { nome: "MARCUS FELIPE", data: "26/09" },
   ];
 
   const destaqueDiv = document.getElementById("destaque");

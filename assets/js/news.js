@@ -10,18 +10,20 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         title: "--  --",
         content: "",
-        imagem: "assets/img/agosto.jpeg",
-        date: "11 de Agosto de 2025",
+        imagem: "assets/img/setembro.jpeg",
+        date: "07 de Setembro de 2025",
       },
       {
         title: "-- Conta de Luz Mais Barata! --",
-        content: "Sua conta de luz mais barata com a Energia por Assinatura da Sunne!",
+        content:
+          "Sua conta de luz mais barata com a Energia por Assinatura da Sunne!",
         imagem: "assets/img/energia_solar.png",
         date: "08 de Agosto de 2025",
       },
       {
         title: "-- Promoção 2025 --",
-        content: "Sua conta de luz mais barata com a Energia por Assinatura da Sunne!",
+        content:
+          "Sua conta de luz mais barata com a Energia por Assinatura da Sunne!",
         imagem: "assets/img/promocao.jpg",
         date: "08 de Agosto de 2025",
       },
